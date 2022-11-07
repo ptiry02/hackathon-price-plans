@@ -4,6 +4,7 @@ import starterImg from '../assets/images/starter.svg'
 import proImg from '../assets/images/pro.svg'
 import teamImg from '../assets/images/team.svg'
 import { BiCheck } from 'react-icons/bi'
+import Button from './Button'
 
 const Card = ({ plan }) => {
   return (
@@ -30,7 +31,7 @@ const Card = ({ plan }) => {
             <h2>$99</h2>{' '}
           </>
         )}
-        <p>per month</p>
+        <p style={plan === 'starter' || plan === 'teams' ? { color: '#5F6974' } : {}}>per month</p>
       </Price>
       <List plan={plan}>
         {list.map((element, i) => (
@@ -40,6 +41,7 @@ const Card = ({ plan }) => {
           </li>
         ))}
       </List>
+      <Button plan={plan} />
     </Wrapper>
   )
 }
