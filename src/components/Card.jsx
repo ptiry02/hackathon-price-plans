@@ -5,8 +5,14 @@ import proImg from '../assets/images/pro.svg'
 import teamImg from '../assets/images/team.svg'
 import { BiCheck } from 'react-icons/bi'
 import Button from './Button'
+import { useContext } from 'react'
+import { ModalContext } from '../storage/modal.context'
 
 const Card = ({ plan }) => {
+  const { setIsVisible } = useContext(ModalContext)
+  const handleClick = () => {
+    setIsVisible(true)
+  }
   return (
     <Wrapper plan={plan}>
       <Img src={plan === 'starter' ? starterImg : plan === 'pro' ? proImg : teamImg} />
@@ -41,7 +47,7 @@ const Card = ({ plan }) => {
           </li>
         ))}
       </List>
-      <Button plan={plan} />
+      <Button onClick={handleClick} plan={plan} />
     </Wrapper>
   )
 }

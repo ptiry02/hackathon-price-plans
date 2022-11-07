@@ -1,7 +1,11 @@
 import styled from 'styled-components'
 
-const Button = ({ plan }) => {
-  return <Btn plan={plan}>{plan === 'starter' ? 'Get Started' : plan === 'pro' ? 'Become a Pro' : 'Get Teams'}</Btn>
+const Button = ({ plan, onClick }) => {
+  return (
+    <Btn onClick={onClick} plan={plan}>
+      {plan === 'starter' ? 'Get Started' : plan === 'pro' ? 'Become a Pro' : 'Get Teams'}
+    </Btn>
+  )
 }
 
 export default Button
