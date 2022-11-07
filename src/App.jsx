@@ -1,15 +1,13 @@
-import styled from 'styled-components'
+import GlobalStyle from './assets/style/GlobalStyles'
+import Card from './components/Card'
 
 function App() {
-  return <Title>Happy Coding!</Title>
+  return (
+    <>
+      <GlobalStyle />
+      <Card plan="teams" />
+    </>
+  )
 }
 
 export default App
-
-const Title = styled.h1`
-  width: 100vw;
-  height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
