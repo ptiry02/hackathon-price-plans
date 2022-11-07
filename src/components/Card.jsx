@@ -1,20 +1,45 @@
 import styled from 'styled-components'
 import { list } from '../helpers/constants'
-import starterImg from '../assets/images/starter.png'
-import proImg from '../assets/images/pro.png'
-import teamImg from '../assets/images/team.png'
+import starterImg from '../assets/images/starter.svg'
+import proImg from '../assets/images/pro.svg'
+import teamImg from '../assets/images/team.svg'
+import { BiCheck } from 'react-icons/bi'
 
 const Card = ({ plan }) => {
   return (
     <Wrapper plan={plan}>
       <Img src={plan === 'starter' ? starterImg : plan === 'pro' ? proImg : teamImg} />
-      <ul>
+      <Price>
+        {plan === 'starter' && (
+          <>
+            <p>Starter</p>
+            <h2>FREE</h2>{' '}
+          </>
+        )}
+        {plan === 'pro' && (
+          <>
+            {' '}
+            <p>Pro</p>
+            <h2>$49</h2>{' '}
+          </>
+        )}
+        {plan === 'teams' && (
+          <>
+            {' '}
+            <p>Teams</p>
+            <h2>$99</h2>{' '}
+          </>
+        )}
+        <p>per month</p>
+      </Price>
+      <List plan={plan}>
         {list.map((element, i) => (
           <li key={i} id={i}>
+            <BiCheck style={{ paddingRight: '10px' }} />
             {element}
           </li>
         ))}
-      </ul>
+      </List>
     </Wrapper>
   )
 }
@@ -33,4 +58,15 @@ const Wrapper = styled.div`
 `
 const Img = styled.img`
   align-self: center;
+`
+const Price = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+`
+const List = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: ${({ plan }) => (plan === 'teams' ? '12px' : '16px')};
+  list-style: none;
 `

@@ -5,6 +5,8 @@ function App() {
   return (
     <>
       <GlobalStyle />
+      <Card plan="starter" />
+      <Card plan="pro" />
       <Card plan="teams" />
     </>
   )

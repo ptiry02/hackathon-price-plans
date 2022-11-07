@@ -7,11 +7,16 @@ const GlobalStyle = createGlobalStyle`
     }
     body {
         box-sizing: border-box;
+        font-family: 'Rubik';
+        font-weight: 300;
+        height: 100vh;
     }
     #root {
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 16px;
+        height: 100%;
     }
 `
 export default GlobalStyle
