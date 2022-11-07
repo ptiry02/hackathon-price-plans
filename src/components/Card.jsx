@@ -34,7 +34,7 @@ const Card = ({ plan }) => {
       </Price>
       <List plan={plan}>
         {list.map((element, i) => (
-          <li key={i} id={i}>
+          <li key={i} id={`element-${i}`}>
             <BiCheck style={{ paddingRight: '10px' }} />
             {element}
           </li>
@@ -69,4 +69,10 @@ const List = styled.ul`
   flex-direction: column;
   gap: ${({ plan }) => (plan === 'teams' ? '12px' : '16px')};
   list-style: none;
+  ${({ plan }) =>
+    plan === 'starter'
+      ? '#element-3, #element-4, #element-5, #element-6 {color: #0000007f}'
+      : plan === 'pro'
+      ? '#element-5, #element-6 {color: #ffffff7f}'
+      : 'color: inherit;'}
 `
