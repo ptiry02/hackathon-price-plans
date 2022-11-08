@@ -7,3 +7,5 @@ Done with React.js. I started the project with my own [base template](https://ww
 I used the styled-components library for styling; That way I can style any element from the component file.
 
 For the modal pop-up I used Context API. The submit button on the modal just closes the modal, there is no back-end connection.
+
+See code quality review [here](https://sonarcloud.io/project/overview?id=ptiry02_hackathon-price-plans)
