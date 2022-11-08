@@ -16,7 +16,13 @@ const GlobalStyle = createGlobalStyle`
         align-items: center;
         justify-content: center;
         gap: 16px;
-        height: 100%;
+        height: fit-content;
+        padding: 5% 0;
+        @media (max-width: 1020px) {
+            flex-direction: column;
+            justify-content: flex-start;
+            height: max-content;
+        }
     }
 `
 export default GlobalStyle

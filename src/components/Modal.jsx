@@ -26,7 +26,7 @@ const Wrapper = styled.div`
 `
 
 const Backdrop = styled.div`
-  position: absolute;
+  position: fixed;
   width: 100vw;
   height: 100vh;
   background-color: #0000009e;
