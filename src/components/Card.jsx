@@ -77,10 +77,13 @@ const List = styled.ul`
   flex-direction: column;
   gap: ${({ plan }) => (plan === 'teams' ? '12px' : '16px')};
   list-style: none;
-  ${({ plan }) =>
-    plan === 'starter'
-      ? '#element-3, #element-4, #element-5, #element-6 {color: #0000007f}'
-      : plan === 'pro'
-      ? '#element-5, #element-6 {color: #ffffff7f}'
-      : 'color: inherit;'}
+  ${({ plan }) => {
+    if (plan === 'starter') {
+      return '#element-3, #element-4, #element-5, #element-6 {color: #0000007f}'
+    }
+    if (plan === 'pro') {
+      return '#element-5, #element-6 {color: #ffffff7f}'
+    }
+    return 'color: inherit;'
+  }}
 `
