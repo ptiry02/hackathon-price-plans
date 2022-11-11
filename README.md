@@ -10,4 +10,20 @@ I used the styled-components library for styling; That way I can style any eleme
 
 For the modal pop-up I used Context API. The submit button on the modal just closes the modal, there is no back-end connection.
 
+To install locally run:
+
+```zsh
+git clone https://github.com/ptiry02/hackathon-price-plans.git
+```
+
+```zsh
+cd hackathon-price-plans
+```
+
+```zsh
+yarn install
+```
+
+To see demo click [here](https://ptiry02.github.io/hackathon-price-plans/)
+
 See code quality review [here](https://sonarcloud.io/project/overview?id=ptiry02_hackathon-price-plans)
