@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/hackathon-price-plans/static/js/main.5a7cc66f.js",
+    "static/media/team.svg": "/hackathon-price-plans/static/media/team.b27391bb4a1103a145bc0de3a2f633f3.svg",
+    "static/media/starter.svg": "/hackathon-price-plans/static/media/starter.9bd86ad0bc6f8c8af9bb073705a9dc35.svg",
+    "static/media/pro.svg": "/hackathon-price-plans/static/media/pro.f21846f053d94e6ce39d4cc981c8639b.svg",
+    "index.html": "/hackathon-price-plans/index.html",
+    "main.5a7cc66f.js.map": "/hackathon-price-plans/static/js/main.5a7cc66f.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.5a7cc66f.js"
+  ]
+}
